@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Schedule</title>
+  <link rel="stylesheet" href="schedual.css">
+  <script src="schedual.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Shinya Shokudo FOH Schedule</h1>
+    <p>2401 3rd Ave, Seattle, WA 98121</p>
+    <h2>Morning Shift</h2>
+  </header>
+  <main>
+    <button onclick="addMorningShiftRow()">Add Morning Shift Row</button>
+    <table id="schedule-table">
+      <thead>
+        <tr>
+          <th>Position</th>
+          <th>Schedule</th>
+          <th>Duration</th>
+          <th>Mon</th>
+          <th>Tue</th>
+          <th>Wed</th>
+          <th>Thu</th>
+          <th>Fri</th>
+          <th>Sat</th>
+          <th>Sun</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input type="text" value="SERVER 1"></td>
+          <td>
+            <input type="time" id="start-time-1" onchange="calculateDuration(1)">
+            <input type="time" id="end-time-1" onchange="calculateDuration(1)">
+          </td>
+          <td id="duration-1">0.00</td>
+          <td><input type="text" id="mon-1" onchange="handleEmployeeChange(this.value, 'mon', 1)"></td>
+          <td><input type="text" id="tue-1" onchange="handleEmployeeChange(this.value, 'tue', 1)"></td>
+          <td><input type="text" id="wed-1" onchange="handleEmployeeChange(this.value, 'wed', 1)"></td>
+          <td><input type="text" id="thu-1" onchange="handleEmployeeChange(this.value, 'thu', 1)"></td>
+          <td><input type="text" id="fri-1" onchange="handleEmployeeChange(this.value, 'fri', 1)"></td>
+          <td><input type="text" id="sat-1" onchange="handleEmployeeChange(this.value, 'sat', 1)"></td>
+          <td><input type="text" id="sun-1" onchange="handleEmployeeChange(this.value, 'sun', 1)"></td>
+        </tr>
+        <!-- Add more rows as needed -->
+      </tbody>
+    </table>
+
+    <h2>Employee List</h2>
+    <button onclick="addEmployeeRow()">Add Employee Row</button>
+    <table id="employee-table">
+      <thead>
+        <tr>
+          <th>Nick Name</th>
+          <th>Name</th>
+          <th>Total Hrs</th>
+          <th>Mon</th>
+          <th>Tue</th>
+          <th>Wed</th>
+          <th>Thu</th>
+          <th>Fri</th>
+          <th>Sat</th>
+          <th>Sun</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr id="justin-row">
+          <td contenteditable="true">Justin</td>
+          <td contenteditable="true">Justin Kim</td>
+          <td id="total-justin">0.00</td>
+          <td id="mon-justin">0.00</td>
+          <td id="tue-justin">0.00</td>
+          <td id="wed-justin">0.00</td>
+          <td id="thu-justin">0.00</td>
+          <td id="fri-justin">0.00</td>
+          <td id="sat-justin">0.00</td>
+          <td id="sun-justin">0.00</td>
+        </tr>
+        <!-- Add more rows as needed -->
+      </tbody>
+    </table>
+  </main>
+</body>
+</html>
