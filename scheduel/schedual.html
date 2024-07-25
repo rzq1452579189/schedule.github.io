@@ -14,7 +14,7 @@
     <h2>FOH</h2>
   </header>
   <main>
-    <button onclick="addMorningShiftRow()">Add Time Slots Row</button>
+    <button onclick="addMorningShiftRow()">Add Morning Shift Row</button>
     <table id="schedule-table">
       <thead>
         <tr>
@@ -32,19 +32,67 @@
       </thead>
       <tbody>
         <tr>
-          <td><input type="text" value="SERVER 1"></td>
+          <td>
+            <select>
+              <option value="SERVER 1">SERVER 1</option>
+              <option value="SERVER 2">SERVER 2</option>
+              <option value="BARTENDER">BARTENDER</option>
+            </select>
+          </td>
           <td>
             <input type="time" id="start-time-1" onchange="calculateDuration(1)">
             <input type="time" id="end-time-1" onchange="calculateDuration(1)">
           </td>
           <td id="duration-1">0.00</td>
-          <td><input type="text" id="mon-1" onchange="handleEmployeeChange(this.value, 'mon', 1)"></td>
-          <td><input type="text" id="tue-1" onchange="handleEmployeeChange(this.value, 'tue', 1)"></td>
-          <td><input type="text" id="wed-1" onchange="handleEmployeeChange(this.value, 'wed', 1)"></td>
-          <td><input type="text" id="thu-1" onchange="handleEmployeeChange(this.value, 'thu', 1)"></td>
-          <td><input type="text" id="fri-1" onchange="handleEmployeeChange(this.value, 'fri', 1)"></td>
-          <td><input type="text" id="sat-1" onchange="handleEmployeeChange(this.value, 'sat', 1)"></td>
-          <td><input type="text" id="sun-1" onchange="handleEmployeeChange(this.value, 'sun', 1)"></td>
+          <td><select id="mon-1" onchange="handleEmployeeChange(this.value, 'mon', 1)">
+            <option value="">Select</option>
+            <option value="Justin">Justin</option>
+            <option value="Momo">Momo</option>
+            <option value="Coco">Coco</option>
+            <option value="Biubiu">Biubiu</option>
+          </select></td>
+          <td><select id="tue-1" onchange="handleEmployeeChange(this.value, 'tue', 1)">
+            <option value="">Select</option>
+            <option value="Justin">Justin</option>
+            <option value="Momo">Momo</option>
+            <option value="Coco">Coco</option>
+            <option value="Biubiu">Biubiu</option>
+          </select></td>
+          <td><select id="wed-1" onchange="handleEmployeeChange(this.value, 'wed', 1)">
+            <option value="">Select</option>
+            <option value="Justin">Justin</option>
+            <option value="Momo">Momo</option>
+            <option value="Coco">Coco</option>
+            <option value="Biubiu">Biubiu</option>
+          </select></td>
+          <td><select id="thu-1" onchange="handleEmployeeChange(this.value, 'thu', 1)">
+            <option value="">Select</option>
+            <option value="Justin">Justin</option>
+            <option value="Momo">Momo</option>
+            <option value="Coco">Coco</option>
+            <option value="Biubiu">Biubiu</option>
+          </select></td>
+          <td><select id="fri-1" onchange="handleEmployeeChange(this.value, 'fri', 1)">
+            <option value="">Select</option>
+            <option value="Justin">Justin</option>
+            <option value="Momo">Momo</option>
+            <option value="Coco">Coco</option>
+            <option value="Biubiu">Biubiu</option>
+          </select></td>
+          <td><select id="sat-1" onchange="handleEmployeeChange(this.value, 'sat', 1)">
+            <option value="">Select</option>
+            <option value="Justin">Justin</option>
+            <option value="Momo">Momo</option>
+            <option value="Coco">Coco</option>
+            <option value="Biubiu">Biubiu</option>
+          </select></td>
+          <td><select id="sun-1" onchange="handleEmployeeChange(this.value, 'sun', 1)">
+            <option value="">Select</option>
+            <option value="Justin">Justin</option>
+            <option value="Momo">Momo</option>
+            <option value="Coco">Coco</option>
+            <option value="Biubiu">Biubiu</option>
+          </select></td>
         </tr>
         <!-- Add more rows as needed -->
       </tbody>
@@ -80,7 +128,42 @@
           <td id="sat-justin">0.00</td>
           <td id="sun-justin">0.00</td>
         </tr>
-        <!-- Add more rows as needed -->
+        <tr id="momo-row">
+          <td contenteditable="true">Momo</td>
+          <td contenteditable="true">Momo Name</td>
+          <td id="total-momo">0.00</td>
+          <td id="mon-momo">0.00</td>
+          <td id="tue-momo">0.00</td>
+          <td id="wed-momo">0.00</td>
+          <td id="thu-momo">0.00</td>
+          <td id="fri-momo">0.00</td>
+          <td id="sat-momo">0.00</td>
+          <td id="sun-momo">0.00</td>
+        </tr>
+        <tr id="coco-row">
+          <td contenteditable="true">Coco</td>
+          <td contenteditable="true">Coco Name</td>
+          <td id="total-coco">0.00</td>
+          <td id="mon-coco">0.00</td>
+          <td id="tue-coco">0.00</td>
+          <td id="wed-coco">0.00</td>
+          <td id="thu-coco">0.00</td>
+          <td id="fri-coco">0.00</td>
+          <td id="sat-coco">0.00</td>
+          <td id="sun-coco">0.00</td>
+        </tr>
+        <tr id="biubiu-row">
+          <td contenteditable="true">Biubiu</td>
+          <td contenteditable="true">Biubiu Name</td>
+          <td id="total-biubiu">0.00</td>
+          <td id="mon-biubiu">0.00</td>
+          <td id="tue-biubiu">0.00</td>
+          <td id="wed-biubiu">0.00</td>
+          <td id="thu-biubiu">0.00</td>
+          <td id="fri-biubiu">0.00</td>
+          <td id="sat-biubiu">0.00</td>
+          <td id="sun-biubiu">0.00</td>
+        </tr>
       </tbody>
     </table>
   </main>

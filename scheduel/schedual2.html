@@ -12,7 +12,7 @@
     <h2>BOH</h2>
   </header>
   <main>
-    <button onclick="addMorningShiftRow()">Add Time Slot</button>
+    <button onclick="addMorningShiftRow()">Add Time Slot Row</button>
     <table id="schedule-table">
       <thead>
         <tr>
@@ -42,13 +42,55 @@
             <input type="time" id="end-time-1" onchange="calculateDuration(1)">
           </td>
           <td id="duration-1">0.00</td>
-          <td><input type="text" id="mon-1" onchange="handleEmployeeChange(this.value, 'mon', 1)"></td>
-          <td><input type="text" id="tue-1" onchange="handleEmployeeChange(this.value, 'tue', 1)"></td>
-          <td><input type="text" id="wed-1" onchange="handleEmployeeChange(this.value, 'wed', 1)"></td>
-          <td><input type="text" id="thu-1" onchange="handleEmployeeChange(this.value, 'thu', 1)"></td>
-          <td><input type="text" id="fri-1" onchange="handleEmployeeChange(this.value, 'fri', 1)"></td>
-          <td><input type="text" id="sat-1" onchange="handleEmployeeChange(this.value, 'sat', 1)"></td>
-          <td><input type="text" id="sun-1" onchange="handleEmployeeChange(this.value, 'sun', 1)"></td>
+          <td><select id="mon-1" onchange="handleEmployeeChange(this.value, 'mon', 1)">
+            <option value="">Select</option>
+            <option value="Kee">Kee</option>
+            <option value="Kevee">Kevee</option>
+            <option value="Ren">Ren</option>
+            <option value="FRANCISCO">FRANCISCO</option>
+          </select></td>
+          <td><select id="tue-1" onchange="handleEmployeeChange(this.value, 'tue', 1)">
+            <option value="">Select</option>
+            <option value="Kee">Kee</option>
+            <option value="Kevee">Kevee</option>
+            <option value="Ren">Ren</option>
+            <option value="FRANCISCO">FRANCISCO</option>
+          </select></td>
+          <td><select id="wed-1" onchange="handleEmployeeChange(this.value, 'wed', 1)">
+            <option value="">Select</option>
+            <option value="Kee">Kee</option>
+            <option value="Kevee">Kevee</option>
+            <option value="Ren">Ren</option>
+            <option value="FRANCISCO">FRANCISCO</option>
+          </select></td>
+          <td><select id="thu-1" onchange="handleEmployeeChange(this.value, 'thu', 1)">
+            <option value="">Select</option>
+            <option value="Kee">Kee</option>
+            <option value="Kevee">Kevee</option>
+            <option value="Ren">Ren</option>
+            <option value="FRANCISCO">FRANCISCO</option>
+          </select></td>
+          <td><select id="fri-1" onchange="handleEmployeeChange(this.value, 'fri', 1)">
+            <option value="">Select</option>
+            <option value="Kee">Kee</option>
+            <option value="Kevee">Kevee</option>
+            <option value="Ren">Ren</option>
+            <option value="FRANCISCO">FRANCISCO</option>
+          </select></td>
+          <td><select id="sat-1" onchange="handleEmployeeChange(this.value, 'sat', 1)">
+            <option value="">Select</option>
+            <option value="Kee">Kee</option>
+            <option value="Kevee">Kevee</option>
+            <option value="Ren">Ren</option>
+            <option value="FRANCISCO">FRANCISCO</option>
+          </select></td>
+          <td><select id="sun-1" onchange="handleEmployeeChange(this.value, 'sun', 1)">
+            <option value="">Select</option>
+            <option value="Kee">Kee</option>
+            <option value="Kevee">Kevee</option>
+            <option value="Ren">Ren</option>
+            <option value="FRANCISCO">FRANCISCO</option>
+          </select></td>
         </tr>
         <!-- Add more rows as needed -->
       </tbody>
@@ -83,6 +125,42 @@
           <td id="fri-FRANCISCO">0.00</td>
           <td id="sat-FRANCISCO">0.00</td>
           <td id="sun-FRANCISCO">0.00</td>
+        </tr>
+        <tr id="KEE-row">
+          <td contenteditable="true">KEE</td>
+          <td contenteditable="true">KEE</td>
+          <td id="total-KEE">0.00</td>
+          <td id="mon-KEE">0.00</td>
+          <td id="tue-KEE">0.00</td>
+          <td id="wed-KEE">0.00</td>
+          <td id="thu-KEE">0.00</td>
+          <td id="fri-KEE">0.00</td>
+          <td id="sat-KEE">0.00</td>
+          <td id="sun-KEE">0.00</td>
+        </tr>
+        <tr id="KEVEE-row">
+          <td contenteditable="true">KEVEE</td>
+          <td contenteditable="true">KEVEE </td>
+          <td id="total-KEVEE">0.00</td>
+          <td id="mon-KEVEE">0.00</td>
+          <td id="tue-KEVEE">0.00</td>
+          <td id="wed-KEVEE">0.00</td>
+          <td id="thu-KEVEE">0.00</td>
+          <td id="fri-KEVEE">0.00</td>
+          <td id="sat-KEVEE">0.00</td>
+          <td id="sun-KEVEE">0.00</td>
+        </tr>
+        <tr id="REN-row">
+          <td contenteditable="true">REN</td>
+          <td contenteditable="true">REN </td>
+          <td id="total-REN">0.00</td>
+          <td id="mon-REN">0.00</td>
+          <td id="tue-REN">0.00</td>
+          <td id="wed-REN">0.00</td>
+          <td id="thu-REN">0.00</td>
+          <td id="fri-REN">0.00</td>
+          <td id="sat-REN">0.00</td>
+          <td id="sun-REN">0.00</td>
         </tr>
         <!-- Add more rows as needed -->
       </tbody>
